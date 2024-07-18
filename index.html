@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+		<script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="min-h-screen flex flex-col items-center justify-center bg-background text-primary-foreground" style="background-color: #4bb6d3;">
+    <h1 class="text-3xl font-bold mb-4" style="color: #040404;">Stopwatch</h1>
+    <div class="flex flex-col items-center justify-center">
+        <div class="text-6xl font-bold" id="display" style="color: #040404;">00:00:00</div>
+        <div class="flex space-x-4 mt-4">
+            <button id="startBtn" class="bg-primary text-primary-foreground px-4 py-2 rounded-lg">Start</button>
+            <button id="pauseBtn" class="bg-accent text-accent-foreground px-4 py-2 rounded-lg" disabled>Pause</button>
+            <button id="resetBtn" class="bg-destructive text-destructive-foreground px-4 py-2 rounded-lg" disabled>Reset</button>
+            <button id="lapBtn" class="bg-secondary text-secondary-foreground px-4 py-2 rounded-lg" disabled>Lap</button>
+        </div>
+        <ul id="laps" class="mt-4 w-64 border border-primary p-2 rounded-lg overflow-y-auto max-h-40" style="color: #040404;"></ul>
+    </div>
+</div>
+<script src="script.js"></script>   
+  </body>
+</html>
